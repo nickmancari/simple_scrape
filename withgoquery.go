@@ -23,7 +23,7 @@ func getSite(s string) {
 	}
 
 	job := doc.Find("a").Text()
-	fmt.Printf("%s\n", job)
+	fmt.Println(job)
 }
 
 func main() {

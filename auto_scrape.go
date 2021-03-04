@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 func getSite(s string) {
@@ -18,9 +19,15 @@ func getSite(s string) {
 			fmt.Println(err)
 		}
 		fmt.Printf("%s\n", bodyText)
+
+		f, _ := os.Create("site.html")
+        	f.Write(bodyText)
 	}
+
 }
 
 func main() {
-	getSite("https://google.com")
+	
+	getSite("https://boards.greenhouse.io/gitlab")
+
 }
