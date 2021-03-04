@@ -22,10 +22,10 @@ func getSite(s string) {
 		log.Fatal(err)
 	}
 
-	job := doc.Find("a").Text("Support Engineer")
+	job := doc.Find("a").Text()
 	fmt.Printf("%s\n", job)
 }
 
 func main() {
-	getSite("https://boards.greenhouse.io/gitlab")
+	getSite("")
 }
