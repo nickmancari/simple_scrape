@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
+	"bufio"
 )
 
 func getSite(s string) {
@@ -22,5 +24,9 @@ func getSite(s string) {
 }
 
 func main() {
-	getSite("https://google.com")
+	
+	var reader = bufio.NewReader(os.Stdin)
+	Input, _ := reader.ReadString()
+
+	getSite(Input)
 }
