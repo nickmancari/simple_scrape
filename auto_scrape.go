@@ -28,6 +28,6 @@ func getSite(s string) {
 
 func main() {
 	
-	getSite("")
+	getSite("https://boards.greenhouse.io/gitlab")
 
 }
